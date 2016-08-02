@@ -10,14 +10,27 @@
 		border: 2px solid black;
 		text-align: center;
 		padding: 0;
+		visibility: visible;
 	}
-	.jsTable { 
+
+	table.sortable thead {
+    background-color:#eee;
+    color:#666666;
+    font-weight: bold;
+    cursor: default;
+	}
+	/*.jsTable { 
 		width: 95%;
 		margin: 10px auto;
-	}
-	.jsTableRowHead {
+		visibility: initial;
+	}*/
+	/*.jsTableRowHead {
 		font-size: 18px;
 		background: lightgrey;
+	}*/
+
+	#pTable {
+		visibility: hidden;
 	}
 	</style>
 </head>
@@ -26,7 +39,17 @@
 
 <div class="petArea">
 	<button id="petButton">Get Pet data</button>
+	<table class = "sortable" id="pTable">
+		<tr> 
+			<th class="sorttable_numeric"> ID </th>
+			<th> Name </th>
+			<th> Category </th>
+			<th> Tag </th>
+		</tr> 
+	</table>
 </div>
-<script src="PetGetter.js"></script>
+<!--<script src="PetGetter.js"></script> -->
+<script src="sorttable.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
